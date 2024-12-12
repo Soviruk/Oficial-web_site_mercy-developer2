@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <!-- Datos de la Empresa -->
+    <h2 class="text-center">Datos de la Empresa</h2>
+    
+    <div class="card mb-4">
+      <img [src]="datosEmpresa?.logo" alt="Logo de la Empresa" class="card-img-top" style="max-width: 200px; margin: 0 auto;">
+      <div class="card-body">
+        <h4 class="card-title">{{ datosEmpresa?.nombre }}</h4>
+        <p><strong>Dirección:</strong> {{ datosEmpresa?.direccion }}</p>
+        <p><strong>Teléfono:</strong> {{ datosEmpresa?.telefono }}</p>
+        <p><strong>Email:</strong> {{ datosEmpresa?.email }}</p>
+      </div>
+    </div>
+  
+    <!-- Profesionales -->
+    <h3 class="text-center">Nuestros Profesionales</h3>
+    <div class="row">
+      <div *ngFor="let profesional of profesionales" class="col-md-4 mb-4">
+        <div class="card">
+          <img [src]="profesional.foto" alt="Foto del Profesional" class="card-img-top" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{ profesional.nombre }}</h5>
+            <p class="card-text">{{ profesional.especialidad }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
